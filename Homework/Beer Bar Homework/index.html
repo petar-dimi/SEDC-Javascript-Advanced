@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer Bar 🍻</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" id="beersLink">Beers</a>
+            <a href="#" id="randomBeerLink">Random Beer</a>
+        </nav>
+    </header>
+    <main>
+        <div id="beerList" class="hidden">
+            <input type="number" id="itemsPerPage" placeholder="Beers per page" min="1">
+            <select id="sortBy">
+                <option value="name-asc">Name (A-Z)</option>
+                <option value="name-desc">Name (Z-A)</option>
+                <option value="abv-asc">Alcohol % (low-high)</option>
+                <option value="abv-desc">Alcohol % (high-low)</option>
+                <option value="ibu-asc">Bitterness (low-high)</option>
+                <option value="ibu-desc">Bitterness (high-low)</option>
+            </select>
+            <button id="applySort">Apply Sort</button>
+            <input type="text" id="search" placeholder="Search for a beer">
+            <div id="beersContainer"></div>
+            <div id="pagination">
+                <button id="prevPage">Previous</button>
+                <span id="pageInfo"></span>
+                <button id="nextPage">Next</button>
+            </div>
+        </div>
+        <div id="beerDetails" class="hidden"></div>
+        <div id="randomBeer" class="hidden"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
