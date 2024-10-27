@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Beer List</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="random-beer.html">Random Beer</a>
+        </nav>
+    </header>
+    <main>
+        <div class="controls">
+            <label for="per-page">Beers per page:</label>
+            <select id="per-page">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+            </select>
+
+            <label for="sort">Sort by:</label>
+            <select id="sort">
+                <option value="name-asc">Name Asc</option>
+                <option value="name-desc">Name Desc</option>
+                <option value="abv-asc">ABV Asc</option>
+                <option value="abv-desc">ABV Desc</option>
+                <option value="ibu-asc">IBU Asc</option>
+                <option value="ibu-desc">IBU Desc</option>
+            </select>
+        </div>
+        <input type="text" id="search" placeholder="Search for a beer...">
+        <ul id="beer-list"></ul>
+        <div id="pagination"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
